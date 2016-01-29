@@ -62,30 +62,41 @@
 1. CZukeiクラスを新規に作成
 - Form1から、CZukeiが持つべき変数と関数を移動
 - 配列は、staticを利用して、CZukei自身に持たせる
-- ポリモーフィズムを使う関数をabstractで定義
+- コンストラクタを作成して、instantiateShikakuとinstantiateSankakuの共通部分を移動
+- randが必要になるので、Form1のrandの定義を修正して使えるようにする
+- ポリモーフィズムを使う関数calcをabstractで定義
+- エラーが発生するので解消する
+  - ヒント：abstract関数を１つでも持ったクラスは、abstractクラスにする必要がある
 
 # 作業4：CShikakuの作成
 設計に従って、CZukeiを継承した子クラスCShikakuを新規に作成しましょう。
 
 ## 作業手順の概要
 1. CShikakuクラスを新規に作成
-2. CZukeiを継承するためのコードを書く
-3. Form1から、CShikakuが持つべき変数と関数を移動
-4. ポリモーフィズムを使う関数をoverrideして実装
+2. CZukeiを継承するためのコードをクラスの定義の行に追加
+3. Form1からinstantiateShikakuを移植する。授業で行った同様の作業を参考にして、static関数で実装する
+4. ポリモーフィズムを使う関数calcをoverrideして、処理をForm1から移植する
+5. CZukeiに、全てのcalcを実行するstatic関数calcAll()を実装する。weをループでまわして、すべてのcalcを呼び出す
+  - ヒント1：宣言は「public static void calcAll(TextBox text)」にするとよい
+  - ヒント2：そのままではTextBoxでエラーが発生する。授業でLabelのエラーを解消した時と同じ手順で修正できる
+  - ヒント3：Form1からは「CZukei.calcAll(textBox1);」で呼び出す
+  - ヒント4：表示の折り返しは"\r\n"
 5. 作成したクラスを使って、四角形の面積が表示されるようにForm1を調整して実行する
+  - ヒント1：コンストラクタのforループ内のコードを削除してから、CShikakuのinstantiate関数を追加
+  - ヒント2：button1を押した処理の中身を削除して、CZukei.calcAll();を呼び出す
 
 # 作業5:CSankakuの作成
 設計に従って、CZukeiを継承した子クラスCSankakuを新規に作成しましょう。
 
-作成手順は四角形と同じ。
+作成手順は四角形の1～4と6のヒント1と同様です。
 
 # 完成したら
-以上ができたら、クラス化は完了です。Form1に不要なコードが残っていたら削除してください。
+以上でクラス化は完了です。Form1に不要なコードが残っていたら削除してください。
 
 全ての作業が終わったら、以下を行って、GitHubに反映させてください。
 
-1. Visual Studioで全て保存して、閉じる
+1. Visual Studioを全て保存して、閉じる
 2. GitHub Desktopで[Changes]を選択
 3. [Summary]欄に「完成」などと入力して、コミット(Commit)して、GitHubに反映させる(PublishかSyncを押す)
 
-
+以上です。
