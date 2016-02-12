@@ -102,6 +102,22 @@
 以上です。
 
 
+# Pull Requestの作成
+課題に対してコメントをするために、以下の手順でPull Request(プルリクエスト)を作成してください。
+
+- github.comをWebブラウザーで開く
+- 自分のアカウントでSign inする
+- [Your repositories]から[obj-prac]を選択
+- 緑色の[New pull request]を押す
+- [Create pull request]を押す
+- タイトルに何か表示されているが、そのまま右下の[Create pull request]を押す(タイトルが空欄だったら、質疑応答などのタイトルをつける)
+以上で完了。
+
+これで、田中のところにPull requestが届いて、コメントのやりとりができるようになります。
+
+以降、[Pull requests]ボタンを押して、作成したPull Requestのタイトルをクリックすると、田中とのコメントのやりとりができます。
+
+
 # calcAll()とcalc()に関するヒント
 2/12の講義中に説明したメモは以下の通りです。
 
